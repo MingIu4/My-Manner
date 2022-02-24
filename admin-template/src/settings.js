@@ -20,6 +20,7 @@ let globalSettings = {
         // 是否开启动态标题
         enableDynamicTitle: false
     },
+
     // 控制台
     dashboard: {
         // 是否开启

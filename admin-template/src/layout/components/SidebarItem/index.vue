@@ -107,31 +107,41 @@ a {
 
 <style lang="scss">
 .el-menu--inline {
-    background-color: $g-sub-sidebar-menu-bg !important;
+    @include color("background-color","g-sub-sidebar-menu-bg");
+    // background-color: $g-sub-sidebar-menu-bg !important;
     .el-menu-item,
     .el-sub-menu > .el-sub-menu__title {
-        color: $g-sub-sidebar-menu-color;
-        background-color: $g-sub-sidebar-menu-bg !important;
+        @include color("color","g-sub-sidebar-menu-colo");
+        //color: $g-sub-sidebar-menu-color;
+        @include color("background-color","g-sub-sidebar-menu-colo");
+        // background-color: $g-sub-sidebar-menu-bg !important;
         &:hover {
-            color: $g-sub-sidebar-menu-hover-color !important;
-            background-color: $g-sub-sidebar-menu-hover-bg !important;
+            @include color("color","g-sub-sidebar-menu-hover-color");
+            // color: $g-sub-sidebar-menu-hover-color !important;
+            @include color("background-color","g-sub-sidebar-menu-hover-bg");
+            // background-color: $g-sub-sidebar-menu-hover-bg !important;
         }
     }
 }
 .el-menu-item,
 .el-sub-menu__title {
-    color: $g-sub-sidebar-menu-color !important;
+    @include color("color","g-sub-sidebar-menu-color");
+    //color: $g-sub-sidebar-menu-color !important;
     background: transparent !important;
     &:hover {
-        color: $g-sub-sidebar-menu-hover-color !important;
-        background-color: $g-sub-sidebar-menu-hover-bg !important;
+        @include color("color","g-sub-sidebar-menu-hover-color");
+        // color: $g-sub-sidebar-menu-hover-color !important;
+        @include color("background-color","g-sub-sidebar-menu-hover-bg");
+        //background-color: $g-sub-sidebar-menu-hover-bg !important;
     }
 }
 .el-menu-item.is-active,
 .el-menu--collapse .el-sub-menu.is-active > .el-sub-menu__title,
 .el-sub-menu .el-menu--inline .el-menu-item.is-active {
-    color: $g-sub-sidebar-menu-active-color !important;
-    background-color: $g-sub-sidebar-menu-active-bg !important;
+    @include color("color","g-sub-sidebar-menu-active-color");
+    //color: $g-sub-sidebar-menu-active-color !important;
+    @include color("background-color","g-sub-sidebar-menu-active-bg");
+    //background-color: $g-sub-sidebar-menu-active-bg !important;
     .icon,
     .el-sub-menu__icon-arrow {
         color: unset;

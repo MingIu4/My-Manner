@@ -1,7 +1,9 @@
 import { defineStore } from 'pinia'
 import { piniaStore } from '@/store'
 import settings from '@/settings'
-
+/**
+ * 用户配置，侧边栏是否收起 页面标题  主题风格
+ */
 export const useSettingsStore = defineStore(
     // 唯一ID
     'settings',

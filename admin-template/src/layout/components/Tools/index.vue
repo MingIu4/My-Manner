@@ -65,13 +65,25 @@ function styleCommand(style) {
                 <svg-icon name="toolbar-theme" />
             </span>
             <!--  主题风格  -->
+            <span v-if="settingsStore.topbar.enableLanguage" class="item">
+                <el-dropdown class="style-container" size="default" @command="languageCommand">
+                    <span>语言</span>
+                    <template #dropdown>
+                        <el-dropdown-menu class="style-dropdown">
+                            <el-dropdown-item command="chain">中文</el-dropdown-item>
+                            <el-dropdown-item command="english">英文</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </template>
+                </el-dropdown>
+            </span>
+            <!--  主题风格  -->
             <span v-if="settingsStore.topbar.enableThemeStyle" class="item">
                 <el-dropdown class="style-container" size="default" @command="styleCommand">
                     <span>主题</span>
                     <template #dropdown>
                         <el-dropdown-menu class="style-dropdown">
-                            <el-dropdown-item command="dark">drak</el-dropdown-item>
-                            <el-dropdown-item command="blu">黑色</el-dropdown-item>
+                            <el-dropdown-item command="fresh">fresh</el-dropdown-item>
+                            <el-dropdown-item command="elegant">elegant</el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>
@@ -115,6 +127,15 @@ function styleCommand(style) {
             transition: all 0.3s;
         }
     }
+    .style-container {
+        @include color("color","g-header-color");
+
+        text-align: center;
+        .span {
+            font-size: 24px;
+            padding: 0 10px;
+        }
+    }
 }
 :deep(.user-container) {
     display: inline-block;
@@ -128,14 +149,6 @@ function styleCommand(style) {
             margin-top: -2px;
             margin-right: 4px;
         }
-    }
-}
-.style-container {
-    color: rgb(252 252 251 / 89.7%);
-    text-align: center;
-    .span {
-        font-size: 24px;
-        padding: 0 10px;
     }
 }
 

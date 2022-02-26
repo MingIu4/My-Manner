@@ -53,11 +53,14 @@ const switchMenu = inject('switchMenu')
     position: relative;
     z-index: 1;
     width: var(--g-main-sidebar-width);
-    color: $g-main-sidebar-menu-color;
-    background-color: $g-main-sidebar-bg;
+    @include color("color","g-main-sidebar-menu-color");
+    //color: $g-main-sidebar-menu-color;
+    @include color("background-color","g-main-sidebar-bg");
+    //background-color: $g-main-sidebar-bg;
     .sidebar-logo {
         transition: 0.3s;
-        background-color: $g-main-sidebar-bg;
+        @include color("background-color","g-main-sidebar-bg");
+        //background-color: $g-main-sidebar-bg;
     }
     .nav {
         width: inherit;
@@ -73,12 +76,16 @@ const switchMenu = inject('switchMenu')
             cursor: pointer;
             transition: all 0.3s;
             &:hover {
-                color: $g-main-sidebar-menu-hover-color;
-                background-color: $g-main-sidebar-menu-hover-bg;
+                @include color("color","g-main-sidebar-menu-hover-color");
+                //color: $g-main-sidebar-menu-hover-color;
+                @include color("background-color","g-main-sidebar-menu-hover-bg");
+                //background-color: $g-main-sidebar-menu-hover-bg;
             }
             &.active {
-                color: $g-main-sidebar-menu-active-color;
-                background-color: $g-main-sidebar-menu-active-bg;
+                @include color("color","g-main-sidebar-menu-active-color");
+                //color: $g-main-sidebar-menu-active-color;
+                @include color("background-color","g-main-sidebar-menu-active-bg");
+                //background-color: $g-main-sidebar-menu-active-bg;
             }
             .svg-icon {
                 margin: 0 auto;

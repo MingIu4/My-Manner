@@ -52,6 +52,7 @@ let globalSettings = {
     },
     // 顶栏
     topbar: {
+        enableLanguage: true,
         // 是启主题风格
         enableThemeStyle: true,
         // 是否固定

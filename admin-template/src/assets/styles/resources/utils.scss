@@ -56,3 +56,25 @@
         clear: both;
     }
 }
+@mixin themeify {
+    @each $theme-name, $theme-map in $themes {
+        $theme-map: $theme-map !global;
+        //判断html的data-theme的属性值  #{}是sass的插值表达式 $theme-name = $dark
+        //& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+        [data-theme="#{$theme-name}"] & {
+            @content;
+        }
+    }
+}
+//声明一个根据Key获取颜色的function 返回格式： g-main-bg: #e5e9ee,
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+//获取背景颜色
+@mixin color($style,$color) {
+    //$style 属性：background-color  调用方法：  @include color("background-color","g-main-bg"); 参数一：css属性；参数二：themes.css中$themes设置的颜色
+    @include themeify {
+        #{$style}: themed($color) !important; //themed($color)获取到对于Key的颜色  g-main-bg: #e5e9ee,
+    }
+}

@@ -51,7 +51,8 @@ header {
     align-items: center;
     padding: 0 20px;
     height: $g-header-height;
-    color: $g-header-color;
+    @include color("color","g-header-color");
+    // color: $g-header-color;
     // background-color: $g-header-bg;
     @include color("background-color","g-header-bg");
     .header-container {
@@ -85,7 +86,8 @@ header {
         span {
             font-size: 24px;
             letter-spacing: 1px;
-            color: $g-header-color;
+            @include color("color","g-header-color");
+            //color: $g-header-color;
         }
     }
     .nav {
@@ -103,15 +105,19 @@ header {
             transition: all 0.3s;
             //background-color: $g-header-bg;
             @include color("background-color","g-header-bg");
-            @include color("colorr","g-header-menu-color");
+            @include color("color","g-header-menu-color");
             //color: $g-header-menu-color;
             &:hover {
-                color: $g-header-menu-hover-color;
-                background-color: $g-header-menu-hover-bg;
+                @include color("color","g-header-menu-hover-color");
+                //color: $g-header-menu-hover-color;
+                @include color("background-color","g-header-menu-hover-bg");
+                //background-color: $g-header-menu-hover-bg;
             }
             &.active {
-                color: $g-header-menu-active-color;
-                background-color: $g-header-menu-active-bg;
+                @include color("color","g-header-menu-active-color");
+                //color: $g-header-menu-active-color;
+                @include color("background-color","g-header-menu-active-bg");
+                // background-color: $g-header-menu-active-bg;
             }
             .svg-icon {
                 font-size: 24px;
@@ -127,7 +133,9 @@ header {
         padding: 0;
         .user-container {
             font-size: 16px;
-            color: $g-header-color;
+            @include color("color","g-header-color");
+
+            // color: $g-header-color;
         }
     }
 }

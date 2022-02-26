@@ -5,7 +5,13 @@ import path from 'path-browserify'
 
 import { useSettingsStore } from './settings'
 import { useRouteStore } from './route'
-
+/**
+ *
+ * 菜单操作 渲染
+ *
+ *
+ */
+// 最深级路径遍历
 function getDeepestPath(routes, rootPath = '') {
     let retnPath
     if (routes.children) {
@@ -48,8 +54,11 @@ export const useMenuStore = defineStore(
                         routes[0].children.push(...item.children)
                     })
                 } else {
+
                     routes = routeStore.routes
+
                 }
+
                 return routes
             },
             // 次导航数据

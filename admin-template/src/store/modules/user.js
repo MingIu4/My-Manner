@@ -19,10 +19,12 @@ export const useUserStore = defineStore(
             permissions: []
         }),
         getters: {
+            // 是否登录
             isLogin: state => {
                 let retn = false
                 if (state.token) {
                     if (new Date().getTime() < state.failure_time * 1000) {
+                        // 登录成功 true
                         retn = true
                     }
                 }

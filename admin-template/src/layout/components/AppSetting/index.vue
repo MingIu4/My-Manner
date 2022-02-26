@@ -126,6 +126,15 @@ function handleCopy() {
                     </div>
                     <el-switch v-model="settings.topbar.enablePageReload" />
                 </div>
+                <div class="setting-item">
+                    <div class="label">
+                        主题切换
+                        <el-tooltip content="是否开启主题切换" placement="top" :append-to-body="false">
+                            <svg-icon name="el-icon-question-filled" />
+                        </el-tooltip>
+                    </div>
+                    <el-switch v-model="settings.topbar.enableThemeStyle" />
+                </div>
                 <el-divider>底部版权</el-divider>
                 <div class="setting-item">
                     <div class="label">是否启用</div>

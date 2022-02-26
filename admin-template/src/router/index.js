@@ -9,6 +9,9 @@ import '@/assets/styles/nprogress.scss'
 import { useNProgress } from '@vueuse/integrations/useNProgress'
 const { isLoading } = useNProgress()
 
+/**
+ * 路由路径 配置文件
+ */
 // 固定路由
 const constantRoutes = [
     {
@@ -70,7 +73,7 @@ const constantRoutes = [
 import MultilevelMenuExample from './modules/multilevel.menu.example'
 import BreadcrumbExample from './modules/breadcrumb.example'
 
-// 动态路由（异步路由、导航栏路由）
+// 动态路由（异步路由、导航栏路由 头部导航栏）
 const asyncRoutes = [
     {
         meta: {

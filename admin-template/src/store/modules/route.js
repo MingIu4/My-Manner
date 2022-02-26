@@ -5,7 +5,12 @@ import api from '@/api'
 
 import { useSettingsStore } from './settings'
 import { useUserStore } from './user'
-
+/**
+ *
+ *
+ * 路由请求  生成路由 权限
+ *
+ */
 function hasPermission(permissions, route) {
     let isAuth = false
     if (route.meta && route.meta.auth) {

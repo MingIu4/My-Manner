@@ -15,6 +15,8 @@ const settingsStore = useSettingsStore()
 import { useKeepAliveStore } from '@/store/modules/keepAlive'
 const keepAliveStore = useKeepAliveStore()
 import { useMenuStore } from '@/store/modules/menu'
+import { onMounted } from 'vue'
+
 const menuStore = useMenuStore()
 
 const showCopyright = computed(() => {
@@ -168,7 +170,9 @@ function switchMenu(index) {
         flex-direction: column;
         min-height: 100%;
         transition: margin-left 0.3s;
-        background-color: $g-main-bg;
+        //background-color: $g-main-bg;
+        @include color("background-color","g-main-bg");
+
         box-shadow: 1px 0 0 0 darken($g-main-bg, 10);
         margin-left: calc(var(--g-main-sidebar-actual-width) + var(--g-sub-sidebar-actual-width));
         .topbar-container {

@@ -12,13 +12,14 @@ let globalSettings = {
          * 3、鉴权指令：v-auth、v-auth-all
          * 4、鉴权函数：this.$auth()、this.$authAll()
          */
-        enablePermission: false,
+        enablePermission: true,
         // 是否开启后端返回路由数据
-        enableBackendReturnRoute: false,
+        enableBackendReturnRoute: true,
         // 是否开启载入进度条
         enableProgress: true,
         // 是否开启动态标题
         enableDynamicTitle: false
+
     },
 
     // 控制台
@@ -51,6 +52,8 @@ let globalSettings = {
     },
     // 顶栏
     topbar: {
+        // 是启主题风格
+        enableThemeStyle: true,
         // 是否固定
         fixed: true,
         // 是否开启侧边栏展开收起按钮
@@ -62,7 +65,7 @@ let globalSettings = {
         // 是否开启全屏
         enableFullscreen: true,
         // 是否开启页面刷新
-        enablePageReload: false,
+        enablePageReload: true,
         // 是否开启应用配置（建议在生产环境关闭）
         enableAppSetting: true
     },

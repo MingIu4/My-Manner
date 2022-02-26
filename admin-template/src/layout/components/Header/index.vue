@@ -11,6 +11,7 @@ const switchMenu = inject('switchMenu')
 </script>
 
 <template>
+    <!-- 头部导航 -->
     <transition name="header">
         <header v-if="settingsStore.mode === 'pc' && settingsStore.menu.menuMode === 'head'">
             <div class="header-container">
@@ -51,7 +52,8 @@ header {
     padding: 0 20px;
     height: $g-header-height;
     color: $g-header-color;
-    background-color: $g-header-bg;
+    // background-color: $g-header-bg;
+    @include color("background-color","g-header-bg");
     .header-container {
         width: $g-header-width;
         height: 100%;
@@ -99,8 +101,10 @@ header {
             width: 80px;
             cursor: pointer;
             transition: all 0.3s;
-            background-color: $g-header-bg;
-            color: $g-header-menu-color;
+            //background-color: $g-header-bg;
+            @include color("background-color","g-header-bg");
+            @include color("colorr","g-header-menu-color");
+            //color: $g-header-menu-color;
             &:hover {
                 color: $g-header-menu-hover-color;
                 background-color: $g-header-menu-hover-bg;

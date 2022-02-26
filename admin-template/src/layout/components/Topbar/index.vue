@@ -44,6 +44,7 @@ function pathCompile(path) {
     let toPath = compile(path)
     return toPath(route.params)
 }
+
 </script>
 
 <template>
@@ -53,10 +54,13 @@ function pathCompile(path) {
             'shadow': scrollTop
         }" data-fixed-calc-width
     >
+        <!-- 头部 面包屑-->
         <div class="left-box">
+            <!-- 边栏展开收起按钮 -->
             <div v-if="enableSidebarCollapse" class="sidebar-collapse" :class="{'is-collapse': settingsStore.menu.subMenuCollapse}" @click="settingsStore.toggleSidebarCollapse()">
                 <svg-icon name="toolbar-collapse" />
             </div>
+            <!-- 面包屑 -->
             <el-breadcrumb v-if="settingsStore.topbar.enableBreadcrumb && settingsStore.mode === 'pc'" separator-class="el-icon-arrow-right">
                 <transition-group name="breadcrumb">
                     <template v-for="(item, index) in breadcrumbList">

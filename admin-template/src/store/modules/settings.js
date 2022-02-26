@@ -13,7 +13,8 @@ export const useSettingsStore = defineStore(
             // 显示模式，支持：mobile、pc
             mode: 'pc',
             // 页面标题
-            title: 'admin后台管理'
+            title: 'admin后台管理',
+            themeStyle: 'default'
         }),
         actions: {
             // 设置访问模式
@@ -33,6 +34,11 @@ export const useSettingsStore = defineStore(
                 } else {
                     this.mode = 'pc'
                 }
+            },
+            // 设置主题风格
+            setThemeStyle(themeStyle) {
+                console.log(themeStyle)
+                this.themeStyle = themeStyle
             },
             // 设置网页标题
             setTitle(title) {

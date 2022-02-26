@@ -6,7 +6,7 @@
     @return math.div($a, $b);
 }
 
-// 文字超出隐藏，默认为单行超出隐藏，可设置多行
+// 文字超出隐藏，默认为单行超出隐藏，可设置多行 传递参数 调用 text-overflow(1,false)
 @mixin text-overflow($line: 1, $fixed-width: true) {
     @if $line == 1 and $fixed-width == true {
         overflow: hidden;
